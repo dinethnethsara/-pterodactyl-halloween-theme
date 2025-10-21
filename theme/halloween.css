@@ -1,0 +1,984 @@
+/*!
+ * Pterodactyl Halloween Theme
+ * BERMUDA Pterodactyl Panel
+ * Version: 1.0.3
+ * License: MIT
+ * 
+ * This CSS file overrides Pterodactyl Panel's default styling
+ * Compatible with Pterodactyl Panel 1.11.x
+ * 
+ * NEW: Beautiful images, rounded buttons, professional login page
+ * NEW: Complete admin panel styling
+ */
+
+:root {
+    --halloween-purple-dark: #1A0B2E;
+    --halloween-purple-mid: #2D1B4E;
+    --halloween-purple-accent: #6B2C91;
+    --halloween-purple-bright: #8B3AB8;
+    --halloween-green-toxic: #39FF14;
+    --halloween-green-neon: #00FF41;
+    --halloween-white: #E8E8E8;
+    --halloween-orange: #FF6B35;
+    --halloween-red: #8B0000;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--halloween-green-toxic) var(--halloween-purple-dark);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--halloween-purple-dark);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--halloween-green-toxic);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--halloween-green-neon);
+}
+
+body {
+    background: var(--halloween-purple-dark) !important;
+    color: var(--halloween-white) !important;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(107, 44, 145, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+#app {
+    background: transparent !important;
+}
+
+.bg-neutral-50,
+.bg-neutral-100,
+.bg-neutral-200,
+.bg-neutral-700,
+.bg-neutral-800,
+.bg-neutral-900,
+.bg-gray-700,
+.bg-gray-800,
+.bg-gray-900 {
+    background-color: var(--halloween-purple-mid) !important;
+}
+
+.bg-white {
+    background-color: var(--halloween-purple-mid) !important;
+}
+
+.text-neutral-400,
+.text-neutral-500,
+.text-gray-400,
+.text-gray-500 {
+    color: var(--halloween-white) !important;
+}
+
+.text-neutral-300 {
+    color: #B8B8B8 !important;
+}
+
+button,
+.btn,
+[role="button"] {
+    background: linear-gradient(135deg, var(--halloween-purple-accent), var(--halloween-purple-bright)) !important;
+    border: 2px solid var(--halloween-green-toxic) !important;
+    color: var(--halloween-white) !important;
+    transition: all 0.3s ease !important;
+    font-weight: 600 !important;
+}
+
+button:hover,
+.btn:hover,
+[role="button"]:hover {
+    background: var(--halloween-green-toxic) !important;
+    color: var(--halloween-purple-dark) !important;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+.bg-green-500,
+.bg-green-600 {
+    background-color: var(--halloween-green-toxic) !important;
+    color: var(--halloween-purple-dark) !important;
+}
+
+.bg-red-500,
+.bg-red-600 {
+    background-color: var(--halloween-red) !important;
+}
+
+.bg-yellow-500,
+.bg-yellow-600 {
+    background-color: var(--halloween-orange) !important;
+}
+
+input,
+textarea,
+select {
+    background: var(--halloween-purple-dark) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    color: var(--halloween-white) !important;
+    border-radius: 6px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--halloween-green-toxic) !important;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3) !important;
+    outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(232, 232, 232, 0.5) !important;
+}
+
+.border-neutral-700,
+.border-neutral-800,
+.border-gray-700,
+.border-gray-800 {
+    border-color: var(--halloween-purple-accent) !important;
+}
+
+[class*="rounded"] {
+    border-radius: 8px !important;
+}
+
+nav,
+header {
+    background: linear-gradient(135deg, var(--halloween-purple-dark), var(--halloween-purple-accent)) !important;
+    border-bottom: 2px solid var(--halloween-green-toxic) !important;
+}
+
+.shadow,
+.shadow-lg,
+.shadow-md {
+    box-shadow: 0 10px 30px rgba(107, 44, 145, 0.5) !important;
+}
+
+a {
+    color: var(--halloween-green-neon) !important;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--halloween-green-toxic) !important;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.divide-neutral-700 > :not([hidden]) ~ :not([hidden]),
+.divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--halloween-purple-accent) !important;
+}
+
+code,
+pre {
+    background: var(--halloween-purple-dark) !important;
+    color: var(--halloween-green-toxic) !important;
+    border: 1px solid var(--halloween-purple-accent) !important;
+}
+
+table {
+    background: var(--halloween-purple-mid) !important;
+}
+
+thead {
+    background: var(--halloween-purple-accent) !important;
+    color: var(--halloween-white) !important;
+}
+
+tbody tr:hover {
+    background: rgba(107, 44, 145, 0.4) !important;
+}
+
+.bermuda-watermark {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 99999;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--halloween-green-toxic);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    padding: 5px 12px;
+    background: rgba(26, 11, 46, 0.9);
+    border: 1px solid var(--halloween-green-toxic);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    user-select: none;
+    pointer-events: none;
+}
+
+.bermuda-footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(26, 11, 46, 0.8);
+    border-top: 2px solid var(--halloween-green-toxic);
+    color: var(--halloween-green-toxic);
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.halloween-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.halloween-particle {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.3;
+    animation: float 10s ease-in-out infinite;
+}
+
+.halloween-particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.halloween-particle:nth-child(2) { left: 30%; top: 60%; animation-delay: 2s; }
+.halloween-particle:nth-child(3) { left: 50%; top: 40%; animation-delay: 4s; }
+.halloween-particle:nth-child(4) { left: 70%; top: 80%; animation-delay: 1s; }
+.halloween-particle:nth-child(5) { left: 85%; top: 30%; animation-delay: 3s; }
+.halloween-particle:nth-child(6) { left: 15%; top: 70%; animation-delay: 5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(2deg); }
+    50% { transform: translateY(-10px) rotate(0deg); }
+    75% { transform: translateY(-15px) rotate(-2deg); }
+}
+
+.fog-layer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 150px;
+    background: linear-gradient(0deg, rgba(107, 44, 145, 0.3) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    animation: fogMove 20s linear infinite;
+}
+
+@keyframes fogMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .halloween-particles,
+    .fog-layer {
+        display: none;
+    }
+    
+    .bermuda-watermark {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+[class*="loading"]::after {
+    content: '🎃';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    animation: pumpkinSpin 2s linear infinite;
+}
+
+@keyframes pumpkinSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE BEAUTIFUL
+   ============================================ */
+
+@media (max-width: 768px) {
+    .login-box,
+    .auth-form {
+        padding: 30px 20px !important;
+        border-radius: 20px !important;
+        margin: 20px;
+    }
+    
+    .login-logo,
+    .auth-logo {
+        max-width: 200px;
+    }
+    
+    button,
+    .btn {
+        padding: 10px 25px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ============================================
+   THEME SIGNATURE
+   ============================================ */
+
+body::before {
+    content: '✨ BERMUDA Pterodactyl Panel - Halloween Theme ✨';
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: var(--halloween-green-toxic);
+    opacity: 0.5;
+    z-index: 99999;
+    text-shadow: 0 0 10px var(--halloween-shadow-green);
+    pointer-events: none;
+}
+
+/* ============================================
+   ADMIN PANEL - BEAUTIFUL STYLING
+   ============================================ */
+
+/* Admin Navigation */
+.admin-nav,
+[class*="admin"] nav,
+body[class*="admin"] nav {
+    background: linear-gradient(135deg, var(--halloween-purple-dark), var(--halloween-purple-accent)) !important;
+    border-bottom: 3px solid var(--halloween-green-toxic) !important;
+    box-shadow: 0 4px 20px rgba(107, 44, 145, 0.6) !important;
+}
+
+/* Admin Sidebar */
+.admin-sidebar,
+[class*="admin"] aside,
+body[class*="admin"] aside {
+    background: linear-gradient(180deg, var(--halloween-purple-dark) 0%, var(--halloween-purple-mid) 100%) !important;
+    border-right: 3px solid var(--halloween-green-toxic) !important;
+    box-shadow: 4px 0 20px rgba(107, 44, 145, 0.6);
+}
+
+.admin-sidebar a,
+[class*="admin"] aside a {
+    color: var(--halloween-white) !important;
+    padding: 12px 20px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 0 15px 15px 0 !important;
+    margin: 5px 10px 5px 0;
+}
+
+.admin-sidebar a:hover,
+[class*="admin"] aside a:hover {
+    background: rgba(57, 255, 20, 0.15) !important;
+    border-left-color: var(--halloween-green-toxic) !important;
+    padding-left: 30px;
+    box-shadow: inset 0 0 20px rgba(57, 255, 20, 0.2);
+}
+
+.admin-sidebar a.active,
+[class*="admin"] aside a.active,
+.admin-sidebar a[class*="active"],
+[class*="admin"] aside a[class*="active"] {
+    background: linear-gradient(90deg, rgba(57, 255, 20, 0.2), transparent) !important;
+    border-left-color: var(--halloween-green-toxic) !important;
+    color: var(--halloween-green-toxic) !important;
+    font-weight: 700;
+}
+
+/* Admin Dashboard Cards */
+.admin-card,
+.admin-panel,
+[class*="admin"] .card,
+[class*="admin"] .panel,
+body[class*="admin"] > div > div {
+    background: linear-gradient(135deg, var(--halloween-purple-mid), rgba(107, 44, 145, 0.4)) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 30px rgba(107, 44, 145, 0.5) !important;
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover,
+[class*="admin"] .card:hover {
+    border-color: var(--halloween-green-toxic) !important;
+    box-shadow: 0 12px 40px rgba(57, 255, 20, 0.4) !important;
+    transform: translateY(-5px);
+}
+
+/* Admin Statistics Cards */
+.stat-card,
+.stats-card,
+[class*="stat"],
+[class*="admin"] [class*="grid"] > div {
+    background: linear-gradient(135deg, var(--halloween-purple-accent), var(--halloween-purple-bright)) !important;
+    border: 2px solid var(--halloween-green-toxic) !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    box-shadow: 0 10px 30px rgba(57, 255, 20, 0.3) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-card:hover,
+[class*="stat"]:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 50px rgba(57, 255, 20, 0.5) !important;
+}
+
+.stat-card h3,
+.stat-card h4,
+[class*="stat"] h3,
+[class*="stat"] h4 {
+    color: var(--halloween-green-toxic) !important;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+    margin-bottom: 10px;
+}
+
+.stat-card p,
+.stat-card span,
+[class*="stat"] p,
+[class*="stat"] span {
+    color: var(--halloween-white) !important;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Admin Tables */
+.admin-table,
+[class*="admin"] table,
+body[class*="admin"] table {
+    background: var(--halloween-purple-mid) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(107, 44, 145, 0.5);
+}
+
+.admin-table thead,
+[class*="admin"] thead {
+    background: linear-gradient(135deg, var(--halloween-purple-accent), var(--halloween-purple-bright)) !important;
+    border-bottom: 3px solid var(--halloween-green-toxic) !important;
+}
+
+.admin-table thead th,
+[class*="admin"] thead th {
+    color: var(--halloween-white) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 15px !important;
+}
+
+.admin-table tbody tr,
+[class*="admin"] tbody tr {
+    border-bottom: 1px solid var(--halloween-purple-accent) !important;
+    transition: all 0.3s ease;
+}
+
+.admin-table tbody tr:nth-child(odd),
+[class*="admin"] tbody tr:nth-child(odd) {
+    background: rgba(45, 27, 78, 0.5) !important;
+}
+
+.admin-table tbody tr:hover,
+[class*="admin"] tbody tr:hover {
+    background: rgba(57, 255, 20, 0.1) !important;
+    box-shadow: inset 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: scale(1.01);
+}
+
+.admin-table tbody td,
+[class*="admin"] tbody td {
+    padding: 12px 15px !important;
+    color: var(--halloween-white) !important;
+}
+
+/* Admin Action Buttons in Tables */
+.admin-table button,
+.admin-table a.btn,
+[class*="admin"] table button,
+[class*="admin"] table a.btn {
+    padding: 6px 15px !important;
+    font-size: 0.85rem !important;
+    margin: 0 3px;
+}
+
+/* Admin Page Header */
+.admin-header,
+[class*="admin"] header,
+body[class*="admin"] h1,
+body[class*="admin"] h2 {
+    color: var(--halloween-white) !important;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    font-weight: 700;
+    border-bottom: 2px solid var(--halloween-green-toxic);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+/* Admin Forms */
+.admin-form,
+[class*="admin"] form {
+    background: var(--halloween-purple-mid) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    box-shadow: 0 8px 30px rgba(107, 44, 145, 0.5);
+}
+
+.admin-form label,
+[class*="admin"] label {
+    color: var(--halloween-white) !important;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select,
+[class*="admin"] input,
+[class*="admin"] textarea,
+[class*="admin"] select {
+    border-radius: 15px !important;
+}
+
+/* Admin Tabs */
+.admin-tabs,
+[class*="admin"] .tabs,
+[class*="admin"] [role="tablist"] {
+    border-bottom: 2px solid var(--halloween-purple-accent) !important;
+    margin-bottom: 20px;
+}
+
+.admin-tabs button,
+.admin-tabs a,
+[class*="admin"] [role="tab"] {
+    background: var(--halloween-purple-dark) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-bottom: none !important;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 12px 25px !important;
+    color: var(--halloween-white) !important;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.admin-tabs button:hover,
+[class*="admin"] [role="tab"]:hover {
+    background: var(--halloween-purple-accent) !important;
+    border-color: var(--halloween-green-toxic) !important;
+}
+
+.admin-tabs button.active,
+.admin-tabs button[aria-selected="true"],
+[class*="admin"] [role="tab"][aria-selected="true"] {
+    background: var(--halloween-purple-mid) !important;
+    border-color: var(--halloween-green-toxic) !important;
+    border-bottom: 2px solid var(--halloween-purple-mid) !important;
+    color: var(--halloween-green-toxic) !important;
+    position: relative;
+    margin-bottom: -2px;
+}
+
+/* Admin Search Bar */
+.admin-search,
+[class*="admin"] [type="search"],
+body[class*="admin"] input[placeholder*="Search"],
+body[class*="admin"] input[placeholder*="search"] {
+    border-radius: 50px !important;
+    padding: 12px 25px !important;
+    background: var(--halloween-purple-dark) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    color: var(--halloween-white) !important;
+    font-size: 1rem;
+}
+
+.admin-search:focus,
+[class*="admin"] [type="search"]:focus {
+    border-color: var(--halloween-green-toxic) !important;
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.4) !important;
+}
+
+/* Admin Alerts */
+[class*="admin"] .alert {
+    border-radius: 15px !important;
+    border-width: 2px !important;
+    padding: 15px 20px !important;
+    font-weight: 600;
+}
+
+/* Admin Pagination */
+[class*="admin"] .pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+[class*="admin"] .pagination button,
+[class*="admin"] .pagination a {
+    border-radius: 15px !important;
+    padding: 8px 15px !important;
+    min-width: 40px;
+}
+
+[class*="admin"] .pagination button.active,
+[class*="admin"] .pagination a.active {
+    background: var(--halloween-green-toxic) !important;
+    color: var(--halloween-purple-dark) !important;
+}
+
+/* Admin Badges */
+[class*="admin"] .badge,
+[class*="admin"] .label {
+    border-radius: 20px !important;
+    padding: 5px 12px !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Admin Dropdowns */
+[class*="admin"] .dropdown-menu,
+[class*="admin"] [role="menu"] {
+    background: var(--halloween-purple-mid) !important;
+    border: 2px solid var(--halloween-green-toxic) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(107, 44, 145, 0.7), 0 0 30px rgba(57, 255, 20, 0.3) !important;
+    padding: 10px !important;
+}
+
+[class*="admin"] .dropdown-item,
+[class*="admin"] [role="menuitem"] {
+    border-radius: 10px !important;
+    padding: 10px 15px !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease;
+}
+
+[class*="admin"] .dropdown-item:hover,
+[class*="admin"] [role="menuitem"]:hover {
+    background: rgba(57, 255, 20, 0.2) !important;
+    padding-left: 25px !important;
+}
+
+/* Admin Page Title */
+body[class*="admin"] h1:first-of-type {
+    font-size: 2.5rem;
+    color: var(--halloween-green-toxic) !important;
+    text-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--halloween-green-toxic);
+}
+
+/* Admin Watermark */
+body[class*="admin"]::after {
+    content: '🎃 BERMUDA Pterodactyl Panel - Admin Panel 🎃';
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--halloween-green-toxic);
+    opacity: 0.6;
+    z-index: 99998;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    pointer-events: none;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+}
+
+/* Admin Content Area */
+.admin-content,
+[class*="admin"] main,
+body[class*="admin"] main {
+    background: transparent !important;
+    padding: 30px;
+}
+
+/* Admin Grid Layout */
+[class*="admin"] [class*="grid"] {
+    display: grid;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Admin Code Blocks */
+[class*="admin"] code,
+[class*="admin"] pre {
+    background: var(--halloween-purple-dark) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 10px !important;
+    color: var(--halloween-green-toxic) !important;
+    padding: 3px 8px !important;
+    font-family: 'Courier New', monospace;
+}
+
+[class*="admin"] pre {
+    padding: 20px !important;
+    overflow-x: auto;
+}
+
+/* Admin Modal Headers */
+[class*="admin"] .modal-header,
+[class*="admin"] [class*="modal"] header {
+    background: linear-gradient(135deg, var(--halloween-purple-accent), var(--halloween-purple-bright)) !important;
+    border-bottom: 2px solid var(--halloween-green-toxic) !important;
+    border-radius: 23px 23px 0 0 !important;
+}
+
+/* Admin User List */
+[class*="admin"] [class*="user"] {
+    transition: all 0.3s ease;
+}
+
+[class*="admin"] [class*="user"]:hover {
+    background: rgba(57, 255, 20, 0.08) !important;
+}
+
+/* Admin Settings Sections */
+[class*="admin"] [class*="setting"],
+[class*="admin"] [class*="config"] {
+    background: var(--halloween-purple-mid) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 15px !important;
+    padding: 25px !important;
+    margin-bottom: 20px;
+}
+
+[class*="admin"] [class*="setting"] h3,
+[class*="admin"] [class*="config"] h3 {
+    color: var(--halloween-green-toxic) !important;
+    border-bottom: 2px solid var(--halloween-green-toxic);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Admin Checkbox & Radio */
+[class*="admin"] input[type="checkbox"],
+[class*="admin"] input[type="radio"] {
+    accent-color: var(--halloween-green-toxic) !important;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Admin Toggle Switches */
+[class*="admin"] [class*="toggle"],
+[class*="admin"] [type="checkbox"][role="switch"] {
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    background: var(--halloween-purple-dark);
+    border: 2px solid var(--halloween-purple-accent);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+[class*="admin"] [class*="toggle"]::after,
+[class*="admin"] [type="checkbox"][role="switch"]::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: var(--halloween-white);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+[class*="admin"] [class*="toggle"]:checked,
+[class*="admin"] [type="checkbox"][role="switch"]:checked {
+    background: var(--halloween-green-toxic) !important;
+    border-color: var(--halloween-green-toxic) !important;
+}
+
+[class*="admin"] [class*="toggle"]:checked::after,
+[class*="admin"] [type="checkbox"][role="switch"]:checked::after {
+    left: 32px;
+    background: var(--halloween-purple-dark);
+}
+
+/* Admin File Manager in Admin Panel */
+[class*="admin"] [class*="file"],
+[class*="admin"] [class*="directory"] {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+[class*="admin"] [class*="file"]:hover,
+[class*="admin"] [class*="directory"]:hover {
+    background: rgba(57, 255, 20, 0.1) !important;
+    border-left: 3px solid var(--halloween-green-toxic);
+    padding-left: 20px;
+}
+
+/* Admin Loading States */
+[class*="admin"] .loading,
+[class*="admin"] [class*="spinner"] {
+    border: 4px solid var(--halloween-purple-accent);
+    border-top-color: var(--halloween-green-toxic);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: pumpkinSpin 1s linear infinite;
+}
+
+/* Admin Progress Bars */
+[class*="admin"] .progress,
+[class*="admin"] [class*="progress"] {
+    background: var(--halloween-purple-dark) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 50px !important;
+    height: 30px !important;
+    overflow: hidden;
+}
+
+[class*="admin"] .progress-bar,
+[class*="admin"] [class*="progress"] > div {
+    background: linear-gradient(90deg, var(--halloween-green-toxic), var(--halloween-green-neon)) !important;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5) !important;
+    border-radius: 50px !important;
+    transition: all 0.5s ease;
+}
+
+/* Admin Breadcrumbs */
+[class*="admin"] .breadcrumb,
+[class*="admin"] nav[aria-label="breadcrumb"] {
+    background: rgba(45, 27, 78, 0.5) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important;
+}
+
+[class*="admin"] .breadcrumb a {
+    color: var(--halloween-green-neon) !important;
+}
+
+[class*="admin"] .breadcrumb-item.active {
+    color: var(--halloween-white) !important;
+}
+
+/* Admin User Avatar / Icons */
+[class*="admin"] [class*="avatar"],
+[class*="admin"] img[class*="avatar"] {
+    border: 3px solid var(--halloween-green-toxic) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+/* Admin Status Indicators */
+.status-online,
+[class*="status-active"],
+[class*="online"] {
+    color: var(--halloween-green-toxic) !important;
+}
+
+.status-offline,
+[class*="status-inactive"],
+[class*="offline"] {
+    color: var(--halloween-red) !important;
+}
+
+/* Admin Dashboard Grid */
+body[class*="admin"] [class*="grid-cols"] > div {
+    background: var(--halloween-purple-mid) !important;
+    border: 2px solid var(--halloween-purple-accent) !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
+}
+
+/* Admin Hover Card Effect */
+body[class*="admin"] [class*="hover\\:"] {
+    transition: all 0.3s ease !important;
+}
+
+/* Admin Empty States */
+[class*="admin"] [class*="empty"],
+[class*="admin"] .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(232, 232, 232, 0.6) !important;
+    font-size: 1.1rem;
+}
+
+[class*="admin"] [class*="empty"]::before {
+    content: '🎃';
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+/* Admin Container */
+body[class*="admin"] {
+    background: var(--halloween-purple-dark) !important;
+}
+
+body[class*="admin"]::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(107, 44, 145, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(57, 255, 20, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Admin Content Wrapper */
+body[class*="admin"] > div {
+    position: relative;
+    z-index: 1;
+}
